@@ -5,22 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Automatiza tu negocio con IA y N8N. Servicios profesionales de automatización, integración y soporte. ¡Solicita asesoría gratis!">
   <title>Tu Solución Automática | Automatización con IA y N8N</title>
+  
+  <!-- Estilos -->
   <link rel="stylesheet" href="styles.css">
+  
+  <!-- Fuentes de Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Montserrat:wght@600;900&display=swap" rel="stylesheet">
+  
+  <!-- Favicon (ejemplo) -->
   <link rel="icon" href="/assets/favicon.ico">
-  <!-- FontAwesome para íconos libres -->
+  
+  <!-- FontAwesome para íconos -->
   <script src="https://kit.fontawesome.com/4b8b1b2e2a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- Hero principal -->
+
+  <!-- Barra de Navegación -->
+  <nav id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo">TuSoluciónAutomática</a>
+      <div class="nav-links">
+        <a href="#about">Nosotros</a>
+        <a href="#services">Servicios</a>
+        <a href="#plans">Planes</a>
+        <a href="#contact" class="btn btn-nav">Contacto</a>
+      </div>
+      <button id="mobile-menu-btn" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Principal -->
   <header id="hero">
-    <div class="container hero-content fade-in">
-      <div class="hero-text">
-        <h1>Automatiza tu negocio con <span class="highlight">Inteligencia Artificial</span></h1>
+    <div id="particles-js"></div>
+    <div class="container hero-content">
+      <div class="hero-text fade-in">
+        <h1>Automatiza tu Negocio con <span class="highlight-text">Inteligencia Artificial</span></h1>
         <p class="hero-subtitle">Impulsa tu empresa con soluciones inteligentes y automatizadas usando N8N. Ahorra tiempo, reduce errores y escala tu operación.</p>
-        <a href="#contact" class="btn">Solicitar asesoría gratis</a>
+        <a href="#contact" class="btn btn-hero">Solicitar Asesoría Gratis</a>
       </div>
     </div>
   </header>
@@ -28,207 +53,164 @@
   <main>
     <!-- Presentación de la empresa -->
     <section id="about">
-      <div class="container about-content fade-in">
-        <h2>¿Quiénes somos?</h2>
-        <p class="about-description">
-          Somos un equipo apasionado por la <strong>automatización inteligente</strong>. Ayudamos a empresas a optimizar procesos, ahorrar tiempo y reducir errores mediante soluciones de <strong>Inteligencia Artificial</strong> y <strong>automatización con N8N</strong>.<br><br>
-          Nos especializamos en conectar tus herramientas favoritas, crear flujos automáticos y potenciar tu negocio con tecnología de vanguardia.
-        </p>
-        <div class="about-icons">
-          <span title="Inteligencia Artificial"><i class="fas fa-brain"></i></span>
-          <span title="Automatización"><i class="fas fa-robot"></i></span>
-          <span title="Integraciones"><i class="fas fa-network-wired"></i></span>
+      <div class="container about-content reveal">
+        <div class="about-text">
+          <h2>Somos tu Socio en <span class="highlight">Automatización Inteligente</span></h2>
+          <p>
+            Nos especializamos en transformar negocios como el tuyo, conectando tus herramientas favoritas, creando flujos de trabajo automáticos y potenciando tu operación con tecnología de vanguardia. Deja que la IA y N8N trabajen por ti.
+          </p>
         </div>
-      </div>
-    </section>
-    <!-- Beneficios / Ventajas -->
-    <section id="benefits">
-      <div class="container benefits-content fade-in">
-        <h2>¿Por qué elegirnos?</h2>
-        <div class="benefits-grid">
-          <div class="benefit-item">
-            <span class="benefit-icon" title="Velocidad"><i class="fas fa-bolt"></i></span>
-            <h3>Velocidad</h3>
-            <p>Implementamos soluciones rápidas y eficientes para que tu negocio avance sin fricciones.</p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-number">95%</span>
+            <span class="stat-label">Reducción de Tareas Manuales</span>
           </div>
-          <div class="benefit-item">
-            <span class="benefit-icon" title="Eficiencia"><i class="fas fa-cogs"></i></span>
-            <h3>Eficiencia</h3>
-            <p>Automatiza tareas repetitivas y reduce errores humanos, optimizando tus recursos.</p>
+          <div class="stat-item">
+            <span class="stat-number">300+</span>
+            <span class="stat-label">Integraciones Soportadas</span>
           </div>
-          <div class="benefit-item">
-            <span class="benefit-icon" title="Ahorro"><i class="fas fa-piggy-bank"></i></span>
-            <h3>Ahorro</h3>
-            <p>Reduce costos operativos y maximiza el retorno de inversión con automatización inteligente.</p>
-          </div>
-          <div class="benefit-item">
-            <span class="benefit-icon" title="Escalabilidad"><i class="fas fa-layer-group"></i></span>
-            <h3>Escalabilidad</h3>
-            <p>Nuestras soluciones crecen contigo, adaptándose a las necesidades de tu empresa.</p>
+          <div class="stat-item">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Operación Continua</span>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Servicios / Beneficios -->
+    <section id="services">
+      <div class="container services-content reveal">
+        <h2 class="section-title">¿Por Qué Elegirnos?</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-bolt"></i></div>
+            <h3>Velocidad y Precisión</h3>
+            <p>Implementamos soluciones rápidas y eficientes para que tu negocio avance sin fricciones y con cero errores.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-cogs"></i></div>
+            <h3>Eficiencia Operativa</h3>
+            <p>Automatiza tareas repetitivas y optimiza tus recursos, liberando a tu equipo para que se enfoque en lo importante.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-piggy-bank"></i></div>
+            <h3>Ahorro de Costos</h3>
+            <p>Reduce costos operativos y maximiza el retorno de inversión con una automatización inteligente y escalable.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+            <h3>Escalabilidad sin Límites</h3>
+            <p>Nuestras soluciones crecen contigo, adaptándose a las nuevas necesidades y desafíos de tu empresa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Planes y servicios -->
     <section id="plans">
-      <div class="container plans-content fade-in">
-        <h2>Planes y Servicios</h2>
+      <div class="container plans-content reveal">
+        <h2 class="section-title">Planes y Servicios</h2>
         <div class="plans-grid">
-          <!-- Plan 1: Soporte -->
           <div class="plan-card">
-            <h3>Soporte</h3>
+            <h3>Soporte N8N</h3>
             <div class="plan-price">Desde <span>$49</span>/mes</div>
             <ul class="plan-features">
-              <li><i class="fas fa-check"></i> Asistencia técnica N8N</li>
-              <li><i class="fas fa-check"></i> Resolución de incidencias</li>
-              <li><i class="fas fa-check"></i> Actualizaciones y mejoras</li>
+              <li><i class="fas fa-check-circle"></i> Asistencia técnica experta</li>
+              <li><i class="fas fa-check-circle"></i> Resolución de incidencias</li>
+              <li><i class="fas fa-check-circle"></i> Mantenimiento y actualizaciones</li>
             </ul>
-            <a href="#contact" class="btn plan-btn">Solicitar</a>
+            <a href="#contact" class="btn">Solicitar</a>
           </div>
-          <!-- Plan 2: Implementación -->
           <div class="plan-card plan-featured">
+            <div class="featured-badge">Más Popular</div>
             <h3>Implementación</h3>
             <div class="plan-price">Desde <span>$299</span></div>
             <ul class="plan-features">
-              <li><i class="fas fa-check"></i> Diseño de flujos personalizados</li>
-              <li><i class="fas fa-check"></i> Integración de herramientas</li>
-              <li><i class="fas fa-check"></i> Capacitación inicial</li>
+              <li><i class="fas fa-check-circle"></i> Diseño de flujos personalizados</li>
+              <li><i class="fas fa-check-circle"></i> Integración de tus herramientas</li>
+              <li><i class="fas fa-check-circle"></i> Capacitación y puesta en marcha</li>
             </ul>
-            <a href="#contact" class="btn plan-btn">Solicitar</a>
+            <a href="#contact" class="btn">Solicitar</a>
           </div>
-          <!-- Plan 3: Proyectos Personalizados -->
           <div class="plan-card">
-            <h3>Proyectos Personalizados</h3>
-            <div class="plan-price">A medida</div>
+            <h3>Proyecto a Medida</h3>
+            <div class="plan-price"><span>A Consultar</span></div>
             <ul class="plan-features">
-              <li><i class="fas fa-check"></i> Automatizaciones avanzadas</li>
-              <li><i class="fas fa-check"></i> Consultoría estratégica</li>
-              <li><i class="fas fa-check"></i> Integraciones complejas</li>
+              <li><i class="fas fa-check-circle"></i> Automatizaciones avanzadas con IA</li>
+              <li><i class="fas fa-check-circle"></i> Consultoría estratégica de procesos</li>
+              <li><i class="fas fa-check-circle"></i> Integraciones complejas (API)</li>
             </ul>
-            <a href="#contact" class="btn plan-btn">Solicitar</a>
+            <a href="#contact" class="btn">Solicitar</a>
           </div>
         </div>
       </div>
     </section>
-    <!-- Ejemplos de proyectos -->
-    <section id="projects">
-      <div class="container projects-content fade-in">
-        <h2>Ejemplos de Proyectos</h2>
-        <div class="projects-grid">
-          <div class="project-item">
-            <span class="project-icon"><i class="fas fa-envelope-open-text"></i></span>
-            <h3>Automatización de Emails</h3>
-            <p>Envía notificaciones automáticas, respuestas inteligentes y reportes periódicos integrando tu CRM y correo electrónico.</p>
-          </div>
-          <div class="project-item">
-            <span class="project-icon"><i class="fas fa-database"></i></span>
-            <h3>Sincronización de Datos</h3>
-            <p>Conecta tus bases de datos y aplicaciones para mantener la información siempre actualizada y sin intervención manual.</p>
-          </div>
-          <div class="project-item">
-            <span class="project-icon"><i class="fas fa-chart-line"></i></span>
-            <h3>Alertas Inteligentes</h3>
-            <p>Recibe alertas automáticas en Slack, WhatsApp o email ante eventos críticos o métricas clave de tu negocio.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+
     <!-- Testimonios -->
     <section id="testimonials">
-      <div class="container testimonials-content fade-in">
-        <h2>Clientes satisfechos</h2>
+      <div class="container testimonials-content reveal">
+        <h2 class="section-title">Lo que Dicen Nuestros Clientes</h2>
         <div class="testimonials-grid">
-          <div class="testimonial-item">
-            <div class="testimonial-avatar"><i class="fas fa-user-circle"></i></div>
-            <p class="testimonial-text">“Gracias a la automatización con N8N, ahorramos horas de trabajo cada semana y mejoramos la calidad de nuestro servicio.”</p>
-            <div class="testimonial-name">María G., E-commerce</div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">“Gracias a la automatización, ahorramos más de 20 horas de trabajo a la semana. ¡Increíble!”</p>
+            <div class="testimonial-author">
+              <i class="fas fa-user-circle"></i>
+              <span>María G., Directora de E-commerce</span>
+            </div>
           </div>
-          <div class="testimonial-item">
-            <div class="testimonial-avatar"><i class="fas fa-user-circle"></i></div>
-            <p class="testimonial-text">“El equipo entendió nuestras necesidades y creó flujos inteligentes que integran todas nuestras herramientas.”</p>
-            <div class="testimonial-name">Carlos P., Agencia Digital</div>
-          </div>
-          <div class="testimonial-item">
-            <div class="testimonial-avatar"><i class="fas fa-user-circle"></i></div>
-            <p class="testimonial-text">“La consultoría y soporte fueron clave para escalar nuestro negocio sin aumentar costos.”</p>
-            <div class="testimonial-name">Lucía R., Startup SaaS</div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">“El equipo entendió nuestras necesidades a la perfección y creó flujos inteligentes que integran todas nuestras herramientas.”</p>
+            <div class="testimonial-author">
+              <i class="fas fa-user-circle"></i>
+              <span>Carlos P., Fundador de Agencia Digital</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    
     <!-- Formulario de contacto -->
     <section id="contact">
-      <div class="container contact-content fade-in">
-        <h2>Contacto</h2>
+      <div class="container contact-content reveal">
+        <h2 class="section-title">Hablemos de tu Proyecto</h2>
+        <p class="contact-subtitle">Completa el formulario y recibe una asesoría gratuita para empezar a automatizar tu negocio.</p>
         <form id="contact-form" novalidate>
           <div class="form-group">
-            <label for="name">Nombre</label>
             <input type="text" id="name" name="name" required placeholder="Tu nombre">
             <span class="form-error" id="error-name"></span>
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            <input type="email" id="email" name="email" required placeholder="Tu email profesional">
             <span class="form-error" id="error-email"></span>
           </div>
           <div class="form-group">
-            <label for="message">Mensaje</label>
-            <textarea id="message" name="message" rows="4" required placeholder="¿En qué podemos ayudarte?"></textarea>
+            <textarea id="message" name="message" rows="4" required placeholder="Cuéntanos sobre tu negocio y lo que necesitas automatizar..."></textarea>
             <span class="form-error" id="error-message"></span>
           </div>
-          <button type="submit" class="btn">Enviar mensaje</button>
+          <button type="submit" class="btn btn-hero">Enviar Mensaje</button>
           <div class="form-success" id="form-success"></div>
         </form>
       </div>
     </section>
-    <!-- FAQ -->
-    <section id="faq">
-      <div class="container faq-content fade-in">
-        <h2>Preguntas frecuentes</h2>
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question">¿Qué es N8N y cómo puede ayudar a mi empresa? <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span></button>
-            <div class="faq-answer">N8N es una plataforma de automatización de flujos que conecta tus aplicaciones y servicios, permitiendo automatizar tareas y procesos sin intervención manual.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">¿Qué tipo de procesos puedo automatizar?<span class="faq-toggle"><i class="fas fa-chevron-down"></i></span></button>
-            <div class="faq-answer">Desde envío de emails, sincronización de datos, generación de reportes, hasta integraciones complejas entre sistemas y alertas inteligentes.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">¿Necesito conocimientos técnicos para usar sus servicios?<span class="faq-toggle"><i class="fas fa-chevron-down"></i></span></button>
-            <div class="faq-answer">No, nosotros nos encargamos de la implementación y soporte. Solo dinos tus necesidades y nos ocupamos del resto.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">¿Ofrecen soporte y mantenimiento?<span class="faq-toggle"><i class="fas fa-chevron-down"></i></span></button>
-            <div class="faq-answer">Sí, contamos con planes de soporte para que tu automatización funcione siempre de manera óptima.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
 
-  <!-- Chatbot flotante -->
-  <div id="chatbot-widget">
-    <button id="chatbot-btn" title="¿Necesitas ayuda?">
-      <i class="fas fa-comments"></i>
-    </button>
-    <!-- Aquí se puede integrar un widget real de chat -->
-  </div>
+  </main>
 
   <!-- Pie de página -->
   <footer>
     <div class="container footer-content">
+      <div class="footer-top">
+        <div class="footer-logo">TuSoluciónAutomática</div>
+        <div class="footer-social">
+          <a href="#" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" title="Twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
       <div class="footer-links">
         <a href="#hero">Inicio</a>
-        <a href="#about">Quiénes somos</a>
+        <a href="#about">Nosotros</a>
+        <a href="#services">Servicios</a>
         <a href="#plans">Planes</a>
-        <a href="#projects">Proyectos</a>
-        <a href="#contact">Contacto</a>
-      </div>
-      <div class="footer-social">
-        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
       </div>
       <div class="footer-copy">
         &copy; 2025 Tu Solución Automática. Todos los derechos reservados.
@@ -237,5 +219,6 @@
   </footer>
 
   <script src="scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.1.0/tsparticles.bundle.min.js"></script>
 </body>
-</html> 
+</html>
