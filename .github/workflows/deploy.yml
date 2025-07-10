@@ -1,0 +1,38 @@
+name: Deploy to AWS EC2
+
+on:
+  # Se ejecuta cada vez que haces un push a la rama main
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del código fuente
+        uses: actions/checkout@v4
+
+      - name: Copiar archivos a EC2 via SSH
+        # Usamos una action popular y confiable para SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          # IP pública o DNS de tu instancia EC2
+          host: ${{ secrets.EC2_HOST }}
+          
+          # Nombre de usuario de EC2 (ej. ec2-user, ubuntu)
+          username: ${{ secrets.EC2_USERNAME }}
+          
+          # Tu clave privada SSH guardada en los secretos
+          key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
+          
+          # Puerto SSH, por defecto es 22
+          port: 22
+          
+          # Directorio de origen (todo en tu repo)
+          source: "./"
+          
+          # Directorio de destino en tu servidor EC2
+          # Este es el directorio raíz de tu servidor web (Apache, Nginx)
+          target: "/usr/share/nginx/html/"
