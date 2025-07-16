@@ -1,25 +1,39 @@
-name: Deploy to AWS EC2
+name: CI/CD Pipeline
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout del código
         uses: actions/checkout@v4
 
-      - name: Copy files to EC2 via SSH
-        uses: appleboy/scp-action@v1
+      - name: Login a Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Construir y empujar la imagen Docker
+        uses: docker/build-push-action@v5
+        with:
+          context: ./tusolucionautomatica # Ajusta al path correcto de tu Dockerfile
+          push: true
+          tags: cordiscox/tusolucionautomatica:${{ github.sha }}, cordiscox/tusolucionautomatica:latest
+
+      - name: Desplegar en la instancia EC2
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USERNAME }}     
-          key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
-          port: 22
-          source: "./frontend/*"
-          target: "/usr/share/nginx/html/"
-          strip_components: 1 
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            cd /home/ec2-user/tusolucionautomatica
+            echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+            docker-compose pull
+            docker-compose up -d
+            docker image prune -af
