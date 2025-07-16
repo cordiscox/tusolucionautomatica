@@ -21,7 +21,7 @@ jobs:
       - name: Construir y empujar la imagen Docker
         uses: docker/build-push-action@v5
         with:
-          context: ./tusolucionautomatica # Ajusta al path correcto de tu Dockerfile
+          context: .
           push: true
           tags: cordiscox/tusolucionautomatica:${{ github.sha }}, cordiscox/tusolucionautomatica:latest
 
